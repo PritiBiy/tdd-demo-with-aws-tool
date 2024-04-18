@@ -12,7 +12,7 @@ public class CartItem {
     }
 
 
-    public Item getItem() {
-        return this.item;
+    public boolean contains(Item item) {
+        return this.item.equals(item);
     }
 }

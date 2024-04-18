@@ -4,26 +4,26 @@ import java.util.List;
 public class Cart {
 // create list field to store items
 
-    private final List<CartItem> items;
+    private final List<CartItem> cartItems;
 
     public Cart() {
         // create constructor to initialize the list field
-        this.items = new ArrayList<>();
+        this.cartItems = new ArrayList<>();
 
     }
 
     public boolean isEmpty() {
-        return items.isEmpty();
+        return cartItems.isEmpty();
     }
 
     public void addItem(CartItem item) {
-        items.add(item);
+        cartItems.add(item);
     }
 
     public String display() {
 
         StringBuilder output = new StringBuilder("{ \"items\":[");
-        for (CartItem item : items) {
+        for (CartItem item : cartItems) {
             output.append(item.toString()).append(",");
         }
         // remove the last comma
@@ -35,8 +35,8 @@ public class Cart {
 
 
     public boolean contains(Item item) {
-        for (CartItem cartItem : items) {
-            if (cartItem.getItem().equals(item)) {
+        for (CartItem cartItem : cartItems) {
+            if (cartItem.contains(item)) {
                 return true;
             }
         }
