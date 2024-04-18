@@ -5,7 +5,19 @@ public class CartTest {
     @Test
     public void testCartCreation() {
         Cart cart = new Cart();
+
         assert cart.isEmpty();
     }
+
+    @Test
+    void shouldBeAbleToAddItemToCartWithQuantity() {
+        Cart cart = new Cart();
+        Item item = new Item("Item1", 10.0, 1);
+
+        cart.addItem(item);
+
+        assert !cart.isEmpty();
+    }
+
 
 }
