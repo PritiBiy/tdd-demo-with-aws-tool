@@ -4,7 +4,7 @@ import java.util.List;
 public class Cart {
 // create list field to store items
 
-    private final List<Item> items;
+    private final List<CartItem> items;
 
     public Cart() {
         // create constructor to initialize the list field
@@ -16,7 +16,7 @@ public class Cart {
         return items.isEmpty();
     }
 
-    public void addItem(Item item) {
+    public void addItem(CartItem item) {
         items.add(item);
     }
 }

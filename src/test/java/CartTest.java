@@ -10,11 +10,12 @@ public class CartTest {
     }
 
     @Test
-    void shouldBeAbleToAddItemToCartWithQuantity() {
+    void shouldBeAbleToAddItemToCart() {
         Cart cart = new Cart();
-        Item item = new Item("Item1", 10.0, 1);
+        Item item = new Item("Item1", 10.0);
+        CartItem cartItem = new CartItem(item, 1);
 
-        cart.addItem(item);
+        cart.addItem(cartItem);
 
         assert !cart.isEmpty();
     }
