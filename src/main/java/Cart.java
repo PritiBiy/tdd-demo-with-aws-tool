@@ -19,4 +19,19 @@ public class Cart {
     public void addItem(CartItem item) {
         items.add(item);
     }
+
+    public String display() {
+
+        StringBuilder output = new StringBuilder("{ \"items\":[");
+        for (CartItem item : items) {
+            output.append(item.toString()).append(",");
+        }
+        // remove the last comma
+        output = new StringBuilder(output.substring(0, output.length() - 1));
+
+        output.append("]}");
+        return output.toString();
+    }
+
+
 }
