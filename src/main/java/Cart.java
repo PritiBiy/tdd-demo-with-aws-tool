@@ -34,4 +34,12 @@ public class Cart {
     }
 
 
+    public boolean contains(Item item) {
+        for (CartItem cartItem : items) {
+            if (cartItem.getItem().equals(item)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

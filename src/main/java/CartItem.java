@@ -12,4 +12,7 @@ public class CartItem {
     }
 
 
+    public Item getItem() {
+        return this.item;
+    }
 }

@@ -44,4 +44,18 @@ public class CartTest {
 
         JSONAssert.assertEquals(expectedJson, actualJson, true);
     }
+
+    // add test to check if added item exists in the cart
+    @Test
+    void shouldBeAbleToCheckIfAddedItemExistsInTheCart() {
+        Cart cart = new Cart();
+        Item item = new Item("Item1", 10.0);
+        CartItem cartItem = new CartItem(item, 1);
+
+        cart.addItem(cartItem);
+
+        assert cart.contains(item);
+    }
+
+
 }
